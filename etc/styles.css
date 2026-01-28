@@ -1,0 +1,213 @@
+/* ***** */
+
+.dialog {
+    position: absolute;
+    width: 375px;
+    background-color: lightgray;
+    color: black;
+    border: 1px solid black;
+}
+
+.dialog h4, .dialog p {
+    padding-left: 20px;
+}
+
+#download-box {
+    top: 60%;
+    left: 40%;
+    display: none;
+}
+
+#progress-bar {
+    border: 1px solid black;
+    width: 300px;
+    height: 20px;
+    margin-left: 20px;
+}
+
+#progress-status {
+    padding: 0;
+    margin: 0;
+    background-color: navy;
+    height: 20px;
+    width: 0px;
+}
+
+#download-btn a {
+    text-decoration: none;
+    color: black;
+}
+
+/* ******** */
+
+#about-box {
+    top: 50%;
+    left: 3%;
+    display: none;
+}
+
+#about-button {
+    display: inline-block;
+    width: 25%;
+    padding-left: 20px;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(blue, black);
+    color: lightgray;
+    font-family: sans-serif;
+    font-size: 0.9em;
+}
+
+button {
+    display: inline-block;
+    width: 100px;
+    height: 30px;
+    background-color: lightgray;
+    border-top: 1px solid white;
+    border-left: 1px solid white;
+    border-right: 2px solid gray;
+    border-bottom: 2px solid gray;
+    cursor: pointer;
+}
+
+input[type='radio'] {
+    cursor: pointer;
+}
+
+#console {
+    width: 90%;
+    max-width: 700px;
+    background-color: lightgray;
+    margin: auto;
+}
+
+#console-buttons {
+    width: 100%;
+}
+
+#console-img {
+    display: inline-block;
+    width: 24%;
+    height: 300px;
+    background-image: url("images/floralshoppe.png");
+    background-repeat: no-repeat;
+}
+
+#console-main {
+    background-color: white;
+    color: black;
+    display: inline-block;
+    box-sizing: border-box;
+    width: 75%;
+    height: 300px;
+    vertical-align: top;
+    padding-top: 10px;
+}
+
+#console-main * {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#console-main .radio {
+    display: inline-block;
+    padding-left: 20px;
+}
+
+#console-main .radio-label {
+    padding: 0px;
+}
+
+#main-container {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#other-buttons {
+    display: inline-block;
+    width: 70%;
+    text-align: right;
+}
+
+#playback-status, #current-time, #select-new {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.res-br {
+    display: none;
+}
+
+#select-new {
+    display: none;
+}
+
+#select-new span {
+    display: inline-block;
+    max-width: 10em;
+    max-height: 3em;
+    overflow: scroll;
+    border: 1px solid lightgray;
+    margin-left: 20px;
+    padding-left: 15px;
+}
+
+.title-bar {
+    background-color: navy;
+    border: 1px solid lightgray;
+    height: 30px;
+}
+
+.title-bar p {
+    margin-top: 7px;
+    padding-left: 15px;
+    color: white;
+}
+
+@media screen and (max-width: 575px) {
+
+    #about-button {
+        width: 15%;
+    }
+
+    #console {
+        width: 100%;
+    }
+    
+    #console-img {
+        display: none;
+        width: 100%;
+        max-width: 320px;
+        margin: auto;
+        text-align: center;
+    }
+
+    #console-main {
+        width: 100%;
+    }
+
+    #console-main h4 {
+        margin-top: 5px;
+    }
+
+    #filename {
+        max-height: 1.5em;
+        max-width: 80%;
+        overflow-y: hidden;
+    }
+
+    #main-container {
+        padding-bottom: 100px;
+    }
+
+    #other-buttons {
+        width: 80%;
+    }
+
+    .res-br {
+        display: initial;
+    }
+}

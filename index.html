@@ -1,0 +1,92 @@
+
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>VaporPlay</title>
+        <link rel="stylesheet" href="etc/styles.css"/>
+        <link rel="icon" type="image/jgp" href="etc/images/icon.jpg">
+    </head>
+    <body>
+        <div id="main-container">
+            <div id="page-title">
+                <h1>VaporPlay</h1>
+                <p><i>Turn any song into vaporwave</i></p>
+            </div>
+            <hr/><br/>
+
+            <div id="console">
+                <div class="title-bar">
+                    <p>VaporPlay</p>
+                </div>
+                <div id="console-img">
+                </div>
+
+                <div id="console-main">
+                    <h4>Welcome to VaporPlay!</h4>
+                    <p>Select a local audio file and then turn it into a vaporwave track!</p>
+                    <label>Select a file:</label><br/>
+                    <input id="file-input" type="file" accept="audio/*"/>
+                    <span id="select-new">
+                        <span id="filename"></span>
+                        <br class="res-br"/>
+                        <a href="index.html">Select a new file</a>
+                    </span>
+                    <br/><br/>
+                    <label>Select a playback speed:</label><br/>
+                    <div id="radios">
+                        <input type="radio" class="radio" name="speed"/>0.5x (half-speed)<br class="res-br"/>
+                        <input type="radio" class="radio" name="speed"/>0.8x (Vaporwave speed)<br/>
+                        <input type="radio" class="radio" name="speed" checked/>1.0x (normal speed)<br class="res-br"/>
+                        <input type="radio" class="radio" name="speed"/>1.25x (faster speed)
+                    </div>
+                    <p>Playback: <span id="playback-status">Not playing</span></p>
+                    <br/><br/>
+
+                    <audio id="audio-player" controls style="position: absolute; top:0; display: none;"></audio>
+                    <br/><br/>
+                </div>
+
+                <div id="console-buttons">
+                    <br/>
+                    <div id="about-button">
+                        <button id="about">About...</button>
+                    </div>
+                    <div id="other-buttons">
+                        <button id="main-stop" disabled>Stop</button>
+                        <button id="main-play" disabled>Play</button>
+                        <button id="main-download" disabled>Download...</button>
+                    </div>
+                    <br/><br/>
+                </div>
+            </div>
+        </div>
+
+        <div id="about-box" class="dialog">
+            <div class="title-bar">
+                <p>About VaporPlay</p>
+            </div>
+            <p><b><i>VaporPlay</i></b><br/>Version 1.1</p>
+            <p>Written by Kieran Walsh (with online help)!<br/></p>
+            <p>Image used: Cover art for "Floral Shoppe" by Macintosh Plus<br/><br/></p>
+            <p id="ok-p"><button id="about-ok">OK</button></p>
+        </div>
+
+        <div id="download-box" class="dialog">
+            <div class="title-bar">
+                <p>Exporting...</p>
+            </div>
+            <p>Exporting audio to WAV file: <span id="download-time-left">0m 00sec left</span></p>
+            <div id="progress-bar">
+                <div id="progress-status"></div>
+            </div>
+            <p id="download-p">
+                <button id="close-download">Close</button>
+                <button id="download-btn" disabled>Download</button>
+            </p>
+        </div>
+        <script src="etc/recorder.js" defer></script>
+        <script src="index.js" defer></script>
+    </body>
+</html>
